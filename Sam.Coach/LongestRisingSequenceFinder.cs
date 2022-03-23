@@ -13,10 +13,14 @@ namespace Sam.Coach
            List<int> longestRisingSequence = new List<int>();
            int highestCount = 0;
            int currentMax;
+
+
            for (int i = 0; i < numbersArr.Length; i++)
            {
                currentMax = int.MinValue;
-               for (int j = i + 1; j < numbersArr.Length; j++)
+
+
+               for (int j = i; j < numbersArr.Length; j++)
                {
                    if (numbersArr[j] > currentMax)
                    {
@@ -24,7 +28,7 @@ namespace Sam.Coach
                        currentMax = numbersArr[j];
                    }
                }
-               if (highestCount < tempLongestRisingSequence.Count)
+               if (highestCount <= tempLongestRisingSequence.Count)
                {
                    highestCount = tempLongestRisingSequence.Count;
                    longestRisingSequence = new List<int>(tempLongestRisingSequence);
