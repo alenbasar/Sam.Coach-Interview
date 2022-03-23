@@ -11,7 +11,7 @@ namespace Sam.Coach
 
             services.AddSingleton<ILongestRisingSequenceFinder, LongestRisingSequenceFinder>();
 
-            Console.WriteLine("TEst");
+            Console.WriteLine("Test");
             return services;
         }
     }
